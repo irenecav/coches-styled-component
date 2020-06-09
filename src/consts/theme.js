@@ -1,0 +1,16 @@
+export default {
+  primaryColor: "#ffb72d",
+  primaryDarkenColor: "#F7B029",
+  fontColor: "#292929",
+  whiteColor: "#ffffff",
+  secondaryColor: "#56646e",
+  grayColor: "#DBDBDB",
+  familyFont: "arial",
+  fontsizeRegular: "1rem",
+  fontsizeMedium: "1.3rem",
+  fontsizeLarge: "1.6rem",
+  tablet: "768px",
+  mobile: "576px",
+  desktop: "992px",
+  largeDesktop: "1200px",
+};
