@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Header from "./components/Header/Header";
+import Showcase from "./components/Showcase/Showcase";
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import reset from "styled-reset";
+import theme from "./consts/theme";
+import ModalProvider from "./context/ModalContext";
+import CarModal from "./components/CarModal/CarModal";
+
+const GlobalStyle = createGlobalStyle`
+  ${reset}
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Header />
+      <ModalProvider>
+        <Showcase />
+        <CarModal />
+      </ModalProvider>
+    </ThemeProvider>
   );
 }
 
